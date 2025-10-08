@@ -12,6 +12,7 @@ export const login = (req, res) => {
 
 export const logout = (req, res) => {
     // Logic for user logout
+<<<<<<< HEAD
     // res.send('User logged out');
     try {
         res.cookie('jwt', "", { maxAge : 0 });
@@ -20,6 +21,9 @@ export const logout = (req, res) => {
         console.log("Error in logout controller: ", error.message);
         res.status(500).json({ error: "Internal Server Error"});
     }
+=======
+    res.send('User logged out');
+>>>>>>> a9821ea1dc8cecece4abd8b6c14cd75fb2dfd063
 };
 
 export const updateProfile = (req, res) => {
